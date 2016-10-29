@@ -16,15 +16,13 @@ public interface Pack {
      *
      * @param data Dados a serem comprimidos e criptografados.
      *
-     * @param password Senha a ser empregada no processo de
-     *                 criptografia.
-     *
+     * @param chars
      * @return Vetor de bytes produzido a partir da entrada
      * fornecida.
      *
      * @see #dd(byte[], String)
      */
-    byte[] cc(byte[] data, String password);
+    byte[] lacra(byte[] data, char[] chars);
 
     /**
      * Descriptografa e descomprime o vetor de bytes fornecido
@@ -34,13 +32,12 @@ public interface Pack {
      *
      * @param data Dados a serem descriptografados e descomprimidos.
      *
-     * @param password Senha empregada para criptografar.
-     *
+     * @param chars
      * @return Dados conforme fornecidos ao método
      * {@link #cc(byte[], String)} juntamente com a senha indicada
      * acima.
      *
      * @see #cc(byte[], String)
      */
-    byte[] dd(byte[] data, String password);
+    byte[] deslacra(byte[] data, char[] chars);
 }
