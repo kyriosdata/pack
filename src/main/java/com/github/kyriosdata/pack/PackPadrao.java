@@ -21,7 +21,12 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Cria uma instância de {@link Pack}.
+ * Essa classe oferece dois serviços: "lacra" e
+ * "deslacra" o conteúdo de um vetor de bytes.
+ *
+ * <p>Lacrar significa comprimir o vetor de bytes,
+ * usando ZIP e criptografar usando AES com senha
+ * de 16 bytes.
  */
 public class PackPadrao implements Pack {
 

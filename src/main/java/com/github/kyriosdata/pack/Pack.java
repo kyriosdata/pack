@@ -7,6 +7,10 @@ package com.github.kyriosdata.pack;
 
 /**
  * Serviços de compressão e criptografia de dados.
+ *
+ * <p>Observe que o uso do método {@link #deslacra(byte[], char[])}
+ * deve ser realizado sobre dados que foram lacrados com o método
+ * {@link #lacra(byte[], char[])}.
  */
 public interface Pack {
 
@@ -20,7 +24,7 @@ public interface Pack {
      * @return Vetor de bytes produzido a partir da entrada
      * fornecida.
      *
-     * @see #dd(byte[], String)
+     * @see #deslacra(byte[], char[])
      */
     byte[] lacra(byte[] data, char[] chars);
 
@@ -28,16 +32,16 @@ public interface Pack {
      * Descriptografa e descomprime o vetor de bytes fornecido
      * usando os algoritmos padrão. Os dados DEVEM estar
      * comprimidos e criptografados pelo método
-     * {@link #cc(byte[], String)}.
+     * {@link #lacra(byte[], char[])}.
      *
      * @param data Dados a serem descriptografados e descomprimidos.
      *
      * @param chars
      * @return Dados conforme fornecidos ao método
-     * {@link #cc(byte[], String)} juntamente com a senha indicada
+     * {@link #lacra(byte[], char[])} juntamente com a senha indicada
      * acima.
      *
-     * @see #cc(byte[], String)
+     * @see #lacra(byte[], char[])
      */
     byte[] deslacra(byte[] data, char[] chars);
 }
