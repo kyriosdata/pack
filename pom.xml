@@ -16,8 +16,7 @@
     <name>com.github.kyriosdata.pack:pack</name>
 
     <description>
-        Modelo de Domínio do Sistema de Apoio à Elaboração
-        de Pareceres (SAEP), composto por um único 'bounded context'.
+        Compressão e criptografia de dados.
     </description>
 
     <url>https://github.com/kyriosdata/pack</url>
