@@ -3,7 +3,7 @@
  * Creative Commons Attribution 4.0 International License.
  */
 
-package br.ufg.inf.es.saep.sandbox.dominio;
+package com.github.kyriosdata.pack;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

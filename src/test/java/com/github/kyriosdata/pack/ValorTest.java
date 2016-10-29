@@ -1,4 +1,4 @@
-package br.ufg.inf.es.saep.sandbox.dominio;
+package com.github.kyriosdata.pack;
 
 
 import org.junit.jupiter.api.Test;
