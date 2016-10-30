@@ -3,7 +3,6 @@ Compressão e Criptografia de Arquivos (CCA)
 
 [<img src="https://api.travis-ci.org/kyriosdata/parser.svg?branch=master">](https://travis-ci.org/kyriosdata/parser)
 [![Coverage Status](https://coveralls.io/repos/github/kyriosdata/pack/badge.svg?branch=master)](https://coveralls.io/github/kyriosdata/pack?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1eb0eb949dd14f2bb8b31c56a988350f)](https://www.codacy.com/app/kyriosdata/parser?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kyriosdata/parser&amp;utm_campaign=Badge_Grade)
 [![Javadocs](http://javadoc.io/badge/com.github.kyriosdata.parser/parser.svg)](http://javadoc.io/doc/com.github.kyriosdata.parser/parser)
 [![Sonarqube](https://img.shields.io/badge/quality-verifique-lightgrey.svg)](https://sonarqube.com/dashboard?id=com.github.kyriosdata.pack%3Apack)
 
