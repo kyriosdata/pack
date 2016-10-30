@@ -24,7 +24,7 @@ public class CompressaoZip implements Compressao {
         final int MAX = 1024;
         byte[] localBuffer = new byte[MAX];
 
-        int count = 0;
+        int count;
         while ((count = zis.read(localBuffer, 0, MAX)) != -1) {
             bos.write(localBuffer, 0, count);
         }

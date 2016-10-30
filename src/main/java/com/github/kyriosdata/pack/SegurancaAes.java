@@ -7,6 +7,7 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 /**
@@ -47,7 +48,7 @@ public class SegurancaAes implements Seguranca {
         }
     }
 
-    private byte[] digest(byte[] dados) throws Exception {
+    private byte[] digest(byte[] dados) throws NoSuchAlgorithmException {
 
         // 128 bits = 16 bytes
         MessageDigest messageDigest = MessageDigest.getInstance("MD5");
