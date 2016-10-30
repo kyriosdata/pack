@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CompressaoZipTest {
 
-    private Compressao zip = new CompressaoZip();
-
     @Test
     public void compressUncompress() throws IOException {
+
+        Compressao zip = new CompressaoZip();
 
         final String msg = "A vida é bela!";
         byte[] dados = msg.getBytes("UTF-8");
