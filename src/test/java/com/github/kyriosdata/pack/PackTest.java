@@ -71,8 +71,8 @@ public class PackTest {
         byte[] dados = new byte[5];
         char[] senha = "ok".toCharArray();
 
-        assertNull(p.lacra(dados, senha));
-        assertNull(p.deslacra(dados, senha));
+        assertThrows(PackException.class, () -> p.lacra(dados, senha));
+        assertThrows(PackException.class, () -> p.deslacra(dados, senha));
     }
 }
 
