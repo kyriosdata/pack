@@ -2,6 +2,7 @@
 Compressão e Criptografia de Sequências de Bytes (CCSB)
 
 [<img src="https://api.travis-ci.org/kyriosdata/pack.svg?branch=master">](https://travis-ci.org/kyriosdata/pack)
+[![Dependency Status](https://www.versioneye.com/user/projects/58162079cd069a34c00a2d36/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58162079cd069a34c00a2d36)
 [![Coverage Status](https://coveralls.io/repos/github/kyriosdata/pack/badge.svg?branch=master)](https://coveralls.io/github/kyriosdata/pack?branch=master)
 [![Javadocs](http://javadoc.io/badge/com.github.kyriosdata.pack/pack.svg)](http://javadoc.io/doc/com.github.kyriosdata.pack/pack)
 [![Sonarqube](https://sonarqube.com/api/badges/gate?key=com.github.kyriosdata.pack%3Apack)](https://sonarqube.com/dashboard?id=com.github.kyriosdata.pack%3Apack)
