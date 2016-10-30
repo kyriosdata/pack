@@ -1,10 +1,29 @@
 package com.github.kyriosdata.pack;
 
 /**
- * Created by kyriosdata on 10/30/16.
+ * Serviço de segurança (sigilo).
  */
 public interface Seguranca {
-    byte[] encrypt(byte[] bytes, byte[] key);
 
-    byte[] decrypt(byte[] encrypted, byte[] keyBytes);
+    /**
+     * Criptografa o vetor de bytes usando a chave.
+     *
+     * @param bytes Vetor de bytes a ser criptografado.
+     * @param key Chave a ser empregada.
+     *
+     * @return Vetor de bytes criptografados com a chave.
+     */
+    byte[] encrypt(byte[] bytes, char[] key);
+
+    /**
+     * Descriptografa o vetor de bytes com a chave.
+     *
+     * @param encrypted Dados criptografados a serem
+     *                  descriptografados.
+     * @param key Chave a ser utilizada para descriptografar
+     *            os dados.
+     *
+     * @return Dados descriptografados.
+     */
+    byte[] decrypt(byte[] encrypted, char[] key);
 }

@@ -5,12 +5,6 @@
 
 package com.github.kyriosdata.pack;
 
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
-import java.security.MessageDigest;
-import java.util.Arrays;
-
 /**
  * Essa classe oferece dois serviços: "lacra" e
  * "deslacra" o conteúdo de um vetor de bytes.
@@ -19,7 +13,7 @@ import java.util.Arrays;
  * usando ZIP e criptografar usando AES com senha
  * de 16 bytes.
  */
-public class PackPadrao extends SegurancaAes implements Pack {
+public class PackPadrao implements Pack {
 
     private Compressao compressao;
     private Seguranca seguranca;
@@ -38,10 +32,8 @@ public class PackPadrao extends SegurancaAes implements Pack {
         byte[] retorno;
 
         try {
-            byte[] senha = digest(toBytes(password));
             byte[] comprime = compressao.comprime(data);
-            retorno = seguranca.encrypt(comprime, senha);
-            Arrays.fill(senha, (byte)0);
+            retorno = seguranca.encrypt(comprime, password);
         } catch (Exception e) {
             retorno = null;
         }
@@ -58,37 +50,12 @@ public class PackPadrao extends SegurancaAes implements Pack {
         byte[] retorno;
 
         try {
-            byte[] senha = digest(toBytes(password));
-            byte[] decrypt = seguranca.decrypt(data, senha);
+            byte[] decrypt = seguranca.decrypt(data, password);
             retorno = compressao.descomprime(decrypt);
-            Arrays.fill(senha, (byte)0);
         } catch (Exception e) {
             retorno = null;
         }
 
         return retorno;
-    }
-
-    private byte[] digest(byte[] dados) throws Exception {
-
-        // 128 bits = 16 bytes
-        MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-
-        messageDigest.update(dados);
-
-        return messageDigest.digest();
-    }
-
-    private byte[] toBytes(char[] chars) {
-        CharBuffer charBuffer = CharBuffer.wrap(chars);
-        ByteBuffer byteBuffer = Charset.forName("UTF-8").encode(charBuffer);
-        byte[] bytes = Arrays.copyOfRange(byteBuffer.array(),
-                byteBuffer.position(), byteBuffer.limit());
-
-        // Limpa dados sensíveis
-        Arrays.fill(charBuffer.array(), '\u0000');
-        Arrays.fill(byteBuffer.array(), (byte) 0);
-
-        return bytes;
     }
 }
