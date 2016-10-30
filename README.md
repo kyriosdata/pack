@@ -1,5 +1,5 @@
 # pack
-Compressão e Criptografia de Arquivos (CCA)
+Compressão e Criptografia de Sequências de Bytes (CCSB)
 
 [<img src="https://api.travis-ci.org/kyriosdata/parser.svg?branch=master">](https://travis-ci.org/kyriosdata/parser)
 [![Coverage Status](https://coveralls.io/repos/github/kyriosdata/pack/badge.svg?branch=master)](https://coveralls.io/github/kyriosdata/pack?branch=master)
