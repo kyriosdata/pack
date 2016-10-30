@@ -8,7 +8,11 @@ package com.github.kyriosdata.pack;
 /**
  * Cria uma instância de {@link Pack}.
  */
-public class PackFactory {
+public final class PackFactory {
+
+    private PackFactory() {
+        // Evita criação desnecessária de instância.
+    }
 
     /**
      * Obtém instância padrão para compressão e
@@ -18,6 +22,8 @@ public class PackFactory {
      * de algoritmos padrão.
      */
     public static Pack newInstance() {
-        return new PackPadrao();
+        Compressao c = new CompressaoZip();
+        Seguranca s = new SegurancaAes();
+        return new PackPadrao(c, s);
     }
 }

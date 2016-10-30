@@ -51,17 +51,5 @@ public class PackTest {
 
         assertArrayEquals(dados, obtido);
     }
-
-    @Test
-    public void criptografia() throws Exception {
-        byte[] keyBytes = "1234567890123457".getBytes("UTF-8");
-        String msg = "Hello, World!";
-        byte[] msgBytes = msg.getBytes("UTF-8");
-
-        byte[] encrypted = new PackPadrao().encrypt(msgBytes, keyBytes);
-        byte[] unencrypt = new PackPadrao().decrypt(encrypted, keyBytes);
-
-        assertArrayEquals(msgBytes, unencrypt);
-    }
 }
 
