@@ -6,7 +6,7 @@ public class PackExceptionTest {
 
     @Test
     public void apenasCriaInstancia() {
-        new PackException(new RuntimeException("a").getMessage());
+        new PackException(new RuntimeException("a"));
     }
 }
 

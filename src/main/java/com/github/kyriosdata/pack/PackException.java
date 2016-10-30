@@ -14,9 +14,9 @@ public class PackException extends RuntimeException {
     /**
      * Sinaliza situação excepcional com Pack.
      *
-     * @param mensagem Mensagem que detalha a exceção.
+     * @param e Exceção original.
      */
-    public PackException(final String mensagem) {
-        super(mensagem);
+    public PackException(Exception e) {
+        super(e);
     }
 }

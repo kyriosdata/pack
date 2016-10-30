@@ -35,7 +35,7 @@ public class PackPadrao implements Pack {
             byte[] comprime = compressao.comprime(data);
             retorno = seguranca.encrypt(comprime, password);
         } catch (Exception e) {
-            throw new PackException(e.getMessage());
+            throw new PackException(e);
         }
 
         return retorno;
@@ -53,7 +53,7 @@ public class PackPadrao implements Pack {
             byte[] decrypt = seguranca.decrypt(data, password);
             retorno = compressao.descomprime(decrypt);
         } catch (Exception e) {
-            throw new PackException(e.getMessage());
+            throw new PackException(e);
         }
 
         return retorno;

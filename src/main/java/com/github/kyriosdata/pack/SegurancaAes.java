@@ -44,7 +44,7 @@ public class SegurancaAes implements Seguranca {
 
             return buffer;
         } catch (Exception ex) {
-            throw new PackException(ex.getMessage());
+            throw new PackException(ex);
         }
     }
 
