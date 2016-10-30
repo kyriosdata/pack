@@ -12,6 +12,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class CompressaoZip implements Compressao {
 
+    @Override
     public byte[] descomprime(byte[] entrada) throws IOException {
 
         // INPUT
@@ -21,11 +22,11 @@ public class CompressaoZip implements Compressao {
 
         // OUTPUT
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        final int MAX = 1024;
-        byte[] localBuffer = new byte[MAX];
+        final int max = 1024;
+        byte[] localBuffer = new byte[max];
 
         int count;
-        while ((count = zis.read(localBuffer, 0, MAX)) != -1) {
+        while ((count = zis.read(localBuffer, 0, max)) != -1) {
             bos.write(localBuffer, 0, count);
         }
 
@@ -34,6 +35,7 @@ public class CompressaoZip implements Compressao {
         return bos.toByteArray();
     }
 
+    @Override
     public byte[] comprime(byte[] entrada) throws IOException {
 
         // OUTPUT
