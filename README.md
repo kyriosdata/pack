@@ -24,3 +24,7 @@ Acrescente a dependência para o projeto conforme abaixo:
   &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </pre>
+
+### Links relevantes
+- https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource 
+- Compressão usando lz4 (https://cyan4973.github.io/lz4/). Aparentemente ainda não há lzfse para Java.
